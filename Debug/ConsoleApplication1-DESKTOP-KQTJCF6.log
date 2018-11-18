@@ -1,0 +1,27 @@
+﻿Build started 2016/12/13 10:37:37.
+     1>Project "C:\Users\user\OneDrive\CUHK\service robot\programming\EAI_basecontroll\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _CRT_SECURE_NO_WARNNINGS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Basecontroller.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Kinect.cpp
+         Kinect.cpp
+     1>c:\users\user\onedrive\cuhk\service robot\programming\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.h(76): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\user\onedrive\cuhk\service robot\programming\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.h(77): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\user\onedrive\cuhk\service robot\programming\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.h(78): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\user\onedrive\cuhk\service robot\programming\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.cpp(293): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\user\onedrive\cuhk\service robot\programming\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.cpp(293): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\user\onedrive\cuhk\service robot\programming\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.cpp(297): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\user\onedrive\cuhk\service robot\programming\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.cpp(297): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\user\onedrive\cuhk\service robot\programming\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.cpp(342): warning C4244: 'argument' : conversion from 'const float' to 'int', possible loss of data
+     1>c:\users\user\onedrive\cuhk\service robot\programming\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.cpp(365): warning C4244: 'argument' : conversion from 'const float' to 'int', possible loss of data
+     1>c:\users\user\onedrive\cuhk\service robot\programming\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.cpp(366): warning C4244: 'argument' : conversion from 'const float' to 'int', possible loss of data
+       Link:
+         D:\Program Files (x86)\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\user\OneDrive\CUHK\service robot\programming\EAI_basecontroll\ConsoleApplication1\Debug\Basecontroller.exe" /INCREMENTAL /NOLOGO Kinect20.lib opencv_calib3d2411d.lib opencv_contrib2411d.lib opencv_core2411d.lib opencv_features2d2411d.lib opencv_flann2411d.lib opencv_gpu2411d.lib opencv_highgui2411d.lib opencv_imgproc2411d.lib opencv_legacy2411d.lib opencv_ml2411d.lib opencv_nonfree2411d.lib opencv_objdetect2411d.lib opencv_ocl2411d.lib opencv_photo2411d.lib opencv_stitching2411d.lib opencv_superres2411d.lib opencv_ts2411d.lib opencv_video2411d.lib opencv_videostab2411d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\user\OneDrive\CUHK\service robot\programming\EAI_basecontroll\ConsoleApplication1\Debug\Basecontroller.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\user\OneDrive\CUHK\service robot\programming\EAI_basecontroll\ConsoleApplication1\Debug\Basecontroller.lib" /MACHINE:X86 Debug\Basecontroller.obj
+         Debug\SerialClass.obj
+         Debug\EAI.obj
+         Debug\Kinect.obj
+         Debug\stdafx.obj
+         ConsoleApplication1.vcxproj -> C:\Users\user\OneDrive\CUHK\service robot\programming\EAI_basecontroll\ConsoleApplication1\Debug\Basecontroller.exe
+     1>Done Building Project "C:\Users\user\OneDrive\CUHK\service robot\programming\EAI_basecontroll\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.06
