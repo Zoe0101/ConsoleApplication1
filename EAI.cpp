@@ -582,5 +582,5 @@ void BaseControl::OneKeyTest(float distance, int direction)
 			}
 		}
 	}
-
 }
+//test comment
