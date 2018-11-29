@@ -43,8 +43,12 @@ public:
 	//Pass an obstacle
 	bool PassObstacle(int direction);
 
+	double rotateX(float x,float y,double a);
+	double rotateY(float x,float y,double a);
 	//onekeytest
 	void BaseControl::OneKeyTest(float dist,int dire);
+	void BaseControl::GoToXY(float x,float y);
+	void BaseControl::GoToXYwithoutRotation(float x,float y);
 
 private:
 	//hardware information

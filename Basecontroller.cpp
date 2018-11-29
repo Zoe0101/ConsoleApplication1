@@ -79,6 +79,8 @@ int main(int argc, CHAR* argv[])
 						     break;  
 					case 't':MEAI.OneKeyTest(0.3,1); 
 						     break;
+					case 'x':MEAI.OneKeyTest(15,90); 
+						     break;
 					default:
 						break;
 					}

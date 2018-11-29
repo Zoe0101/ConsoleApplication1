@@ -2,6 +2,7 @@
 # include "Basecontrol.h"
 #include "SerialClass.h"
 #include <SDKDDKVer.h>
+#include <math.h>
 
 
 //send command to Arduino and read sensor's state
@@ -584,3 +585,88 @@ void BaseControl::OneKeyTest(float distance, int direction)
 	}
 }
 //test comment
+double rotateX(float x,float y,double a)
+{
+//	float tx=x;
+//	float ty=y;
+	return cos(a)*x-sin(a)*y
+}
+double rotateY(float x,float y,double a)
+{
+//	float tx=x;
+//	float ty=y;
+	return sin(a)*x+cos(a)*y
+}
+void BaseControl::GoToXY(float x,float y)
+{
+	float cx=x;
+	float cy=y;
+	float tx,ty=0;
+	float longside=sqrt(x*x+y*y);
+	float cost=x/longside;
+	float sint=y/longside;
+	double angle=0;
+	int LeftRightFlag=0;
+	while ((abs(cy)>5)&&(abs(cx)>5))
+	{
+		ReadSornaSensor();
+		angle=atan2(cy,cx)/M_PI*180;
+		RotateRobot(angle,cy<=0);
+		tx=cx;
+		ty=cy;
+		cx=cost*tx-sint*ty;
+		cy=sint*tx+cost*ty;
+//			longside=sqrt(cx*cx+cy*cy);
+//			cost=cx/longside;
+//			sint=cy/longside;
+		ReadSornaSensor();
+		while !(sornar[0]>15 && sornar[1]>15 && sornar[2]>15 ) 
+		{
+			if(sornar[0]>sornar[1])
+			{
+				LeftRightFlag=-1;
+			}
+			else
+			{
+				LeftRightFlag=1;
+			}
+			RotateRobot(30,LeftRightFlag==1);
+			tx=cx;
+			ty=cy;
+			cx=rotateX(tx,ty,30*-LeftRightFlag);
+			cy=rotateY(tx,ty,30*-LeftRightFlag);
+		}
+		WalkRobot(15,1);
+	}
+}
+//void BaseControl::GoToXYwithoutRotation(float x,float y)
+//{
+////	driveWithSpeed(float left, float right)
+////	max=70
+//	float WheelDiam=12.5;
+//	float WheelTrack=34;
+//	float b=0;
+//	float s=0;
+//	float c=0;
+//	float vl,vr,va=0;
+//	float speedtick=10;
+//	if (y!=0)
+//	{
+//		b=y/2+x*x/(2*y);
+//		s=-x/y;
+//		c=-b/s;
+//	}
+//	else
+//	{
+//		c=0;
+//	}
+//	
+//	if(c==0)
+//	{
+////		if()
+//	}
+//	else
+//	{
+//		va=2*M_PI/speedtick;
+//	}
+//}
