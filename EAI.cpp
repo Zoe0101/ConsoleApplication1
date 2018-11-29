@@ -609,6 +609,10 @@ void BaseControl::GoToXY(float x,float y)
 	int LeftRightFlag=0;
 	while ((abs(cy)>5)&&(abs(cx)>5))
 	{
+		longside=sqrt(cx*cx+cy*cy);
+		cost=cx/longside;
+		sint=cy/longside;
+		
 		ReadSornaSensor();
 		angle=atan2(cy,cx)/M_PI*180;
 		RotateRobot(angle,cy<=0);
@@ -616,9 +620,6 @@ void BaseControl::GoToXY(float x,float y)
 		ty=cy;
 		cx=cost*tx-sint*ty;
 		cy=sint*tx+cost*ty;
-//			longside=sqrt(cx*cx+cy*cy);
-//			cost=cx/longside;
-//			sint=cy/longside;
 		ReadSornaSensor();
 		while !(sornar[0]>15 && sornar[1]>15 && sornar[2]>15 ) 
 		{
@@ -637,6 +638,7 @@ void BaseControl::GoToXY(float x,float y)
 			cy=rotateY(tx,ty,30*-LeftRightFlag);
 		}
 		WalkRobot(15,1);
+		cx=cx-15;
 	}
 }
 //void BaseControl::GoToXYwithoutRotation(float x,float y)
