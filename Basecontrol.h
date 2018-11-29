@@ -42,7 +42,6 @@ public:
 	void BaseControl::CircleRobot(double radius, double angle, int direction);
 	//Pass an obstacle
 	bool PassObstacle(int direction);
-
 	double rotateX(float x,float y,double a);
 	double rotateY(float x,float y,double a);
 	//onekeytest
