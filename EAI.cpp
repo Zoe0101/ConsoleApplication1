@@ -640,7 +640,7 @@ void BaseControl::GoToXY(float x,float y)
 	float sint=y/longside;
 	double angle=0;
 	int LeftRightFlag=0;
-	while ((abs(cy)>5)&&(abs(cx)>5))
+	while ((abs(cy)>10)&&(abs(cx)>10))
 	{
 		longside=sqrt(cx*cx+cy*cy);
 		cost=cx/longside;
