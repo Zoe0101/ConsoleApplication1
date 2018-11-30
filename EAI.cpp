@@ -703,7 +703,8 @@ void BaseControl::GoToXYwithoutRotation(float xx,float yy)
 	{
 		c=0;
 	}
-	
+	cout<<'c is';
+	cout<<c<<endl;
 	if(c==0)
 	{
 //		if()
@@ -725,6 +726,8 @@ void BaseControl::GoToXYwithoutRotation(float xx,float yy)
 		direangle=atan2(y,x);
 		moveangle=2*abs(direangle);
 		movetick=(int) moveangle*abs(c)/tickpercm;
+		cout<<vl<<endl;
+		cout<<vr<<endl;
 		WalkRobotBySpeedLeftTick(vl/100, vr/100, movetick);
 	}
 	return;
