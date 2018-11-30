@@ -33,7 +33,7 @@ bool BaseControl::sendCommand(char *cmd)
 }
 
 //Read data from ardunio
-bool BaseControl::readingData( int dataLen)
+bool BaseControl::readingData(int dataLen)
 {
 	//char InComingData[64];
 	int i = 0;
@@ -371,6 +371,38 @@ void BaseControl::WalkRobot(double distance,int direction)
 	return;
 }
 
+
+void BaseControl::WalkRobotBySpeedLeftTick(float left, float right, int tick)
+{
+	float vl=left;
+	float vr=right;
+	resetEncoders();
+	//target encoder counts
+	int desiretick = tick;
+	cout << "remainning tick: " << desiretick << endl;
+	//current encoder counts, which is average of left and right
+	int currenttick = 0;
+	//Position error
+	int err = desiretick;
+	char wkey = NULL;
+	while (err>0)
+	{
+		//make sure no object is before the base
+		driveWithSpeed(vl, vr);
+		Sleep(50);
+		getEncoderCounts();
+		currenttick = abs(e[0]);
+		cout << "current tick.: " << currenttick << endl;
+		err = desiretick- currenttick;
+		if (_kbhit()) wkey = _getch();
+		if (wkey == 27)
+		{
+			break;
+		}
+	}
+	stop();
+	return;
+}
 //rotate robot with a certain angle
 //the angular speed is set at 1 rad/s
 
@@ -583,6 +615,7 @@ void BaseControl::OneKeyTest(float distance, int direction)
 			}
 		}
 	}
+	return;
 }
 //test comment
 double rotateX(float x,float y,double a)
@@ -640,35 +673,55 @@ void BaseControl::GoToXY(float x,float y)
 		WalkRobot(15,1);
 		cx=cx-15;
 	}
+	return;
 }
-//void BaseControl::GoToXYwithoutRotation(float x,float y)
-//{
-////	driveWithSpeed(float left, float right)
-////	max=70
-//	float WheelDiam=12.5;
-//	float WheelTrack=34;
-//	float b=0;
-//	float s=0;
-//	float c=0;
-//	float vl,vr,va=0;
-//	float speedtick=10;
-//	if (y!=0)
-//	{
-//		b=y/2+x*x/(2*y);
-//		s=-x/y;
-//		c=-b/s;
-//	}
-//	else
-//	{
-//		c=0;
-//	}
-//	
-//	if(c==0)
-//	{
-////		if()
-//	}
-//	else
-//	{
-//		va=2*M_PI/speedtick;
-//	}
-//}
+void BaseControl::GoToXYwithoutRotation(float x,float y)
+{
+//	driveWithSpeed(float left, float right)
+//	max=70
+	float WheelDiam=12.5;
+	float WheelTrack=34;
+	float b=0;
+	float s=0;
+	float c=0;
+	float vl,vr,va=0;
+	float speedtick=20;
+	float tickpercm=31.8310;
+	float direangle,moveangle=0;
+	int movetick=0;
+	if (y!=0)
+	{
+		b=y/2+x*x/(2*y);
+		s=-x/y;
+		c=abs(b);
+	}
+	else
+	{
+		c=0;
+	}
+	
+	if(c==0)
+	{
+//		if()
+		WalkRobot(x,1);
+	}
+	else
+	{
+		va=2*M_PI/speedtick;
+		if(y>0)
+		{
+			vl=va*(abs(c)-WheelTrack/2);
+			vr=va*(abs(c)+WheelTrack/2);
+		}
+		else
+		{
+			vl=va*(abs(c)+WheelTrack/2);
+			vr=va*(abs(c)-WheelTrack/2);
+		}
+		direangle=atan2(y,x);
+		moveangle=2*abs(direangle);
+		movetick=(int) moveangle*abs(c)/tickpercm;
+		WalkRobotBySpeedLeftTick(vl, vr, movetick);
+	}
+	return;
+}

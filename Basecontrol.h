@@ -33,6 +33,7 @@ public:
 	//move robot with linear distance
 	//the speed is setted at 0.3m/s
 	void BaseControl::WalkRobot(double distance, int direction);
+	void BaseControl::WalkRobotBySpeedLeftTick(float left, float right, int tick);
 	//rotate robot with a certain angle
 	//the angular speed is set at 1 rad/s
 	void BaseControl::RotateRobot(double angle, int direction);
