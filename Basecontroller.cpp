@@ -81,7 +81,7 @@ int main(int argc, CHAR* argv[])
 						     break;
 					case 'b':MEAI.GoToXY(30,30); 
 						     break;
-					case 'c':MEAI.GoToXYwithoutRotation(15,90); 
+					case 'c':MEAI.GoToXYwithoutRotation(30,30); 
 						     break;
 					default:
 						break;
