@@ -632,8 +632,8 @@ double BaseControl::rotateY(float x,float y,double a)
 }
 void BaseControl::GoToXY(float x,float y)
 {
-	float cx=x;
-	float cy=y;
+	float cx=x*100;
+	float cy=y*100;
 	float tx,ty=0;
 	float longside=sqrt(x*x+y*y);
 	float cost=x/longside;
@@ -670,7 +670,7 @@ void BaseControl::GoToXY(float x,float y)
 			cx=rotateX(tx,ty,30*-LeftRightFlag);
 			cy=rotateY(tx,ty,30*-LeftRightFlag);
 		}
-		WalkRobot(15,1);
+		WalkRobot(1,1);
 		cx=cx-15;
 	}
 	return;
