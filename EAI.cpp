@@ -672,7 +672,7 @@ void BaseControl::GoToXY(float x,float y)
 		}
 		WalkRobot(0.15,1);
 		cx=cx-15;
-		if (abs(cy)<10)&&(abs(cx)<10)
+		if ((abs(cy)<10)&&(abs(cx)<10))
 		{
 			break;
 		}
