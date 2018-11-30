@@ -4,7 +4,7 @@
 #include <SDKDDKVer.h>
 #include <math.h>
 
-
+#define M_PI 3.14159 
 //send command to Arduino and read sensor's state
 //parameters: comPort, cmd
 //
