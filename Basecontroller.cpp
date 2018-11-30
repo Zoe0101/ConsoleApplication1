@@ -79,7 +79,7 @@ int main(int argc, CHAR* argv[])
 						     break;  
 					case 't':MEAI.OneKeyTest(0.3,1); 
 						     break;
-					case 'b':MEAI.GoToXY(15,90); 
+					case 'b':MEAI.GoToXY(30,30); 
 						     break;
 					case 'c':MEAI.GoToXYwithoutRotation(15,90); 
 						     break;
