@@ -644,7 +644,7 @@ void BaseControl::GoToXY(float x,float y)
 	{
 		longside=sqrt(cx*cx+cy*cy);
 		cost=cx/longside;
-		sint=cy/longside;
+		sint=-cy/longside;
 		
 		ReadSornaSensor();
 		angle=atan2(cy,cx)/M_PI*180;
@@ -654,7 +654,7 @@ void BaseControl::GoToXY(float x,float y)
 		cx=cost*tx-sint*ty;
 		cy=sint*tx+cost*ty;
 		ReadSornaSensor();
-		while (!(sornar[0]>15 && sornar[1]>15 && sornar[2]>15 ) )
+		while (!(sornar[0]>4 && sornar[1]>4 && sornar[2]>4 ) )
 		{
 			if(sornar[0]>sornar[1])
 			{
