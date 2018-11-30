@@ -48,7 +48,7 @@ public:
 	//onekeytest
 	void BaseControl::OneKeyTest(float dist,int dire);
 	void BaseControl::GoToXY(float x,float y);
-	void BaseControl::GoToXYwithoutRotation(float x,float y);
+	void BaseControl::GoToXYwithoutRotation(float xx,float yy);
 
 private:
 	//hardware information

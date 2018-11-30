@@ -675,10 +675,12 @@ void BaseControl::GoToXY(float x,float y)
 	}
 	return;
 }
-void BaseControl::GoToXYwithoutRotation(float x,float y)
+void BaseControl::GoToXYwithoutRotation(float xx,float yy)
 {
 //	driveWithSpeed(float left, float right)
 //	max=70
+	float x=xx*100;
+	float y=yy*100;
 	float WheelDiam=12.5;
 	float WheelTrack=34;
 	float b=0;
