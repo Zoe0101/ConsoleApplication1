@@ -728,7 +728,7 @@ void BaseControl::GoToXYwithoutRotation(float xx,float yy)
 		movetick=(int) moveangle*abs(c)*tickpercm;
 		cout<<vl<<endl;
 		cout<<vr<<endl;
-		WalkRobotBySpeedLeftTick(vl/200, vr/200, movetick);
+		WalkRobotBySpeedLeftTick(vl, vr, movetick);
 	}
 	return;
 }
