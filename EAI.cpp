@@ -670,7 +670,7 @@ void BaseControl::GoToXY(float x,float y)
 			cx=rotateX(tx,ty,30*-LeftRightFlag);
 			cy=rotateY(tx,ty,30*-LeftRightFlag);
 		}
-		WalkRobot(0.1,1);
+		WalkRobot(0.15,1);
 		cx=cx-15;
 	}
 	return;
