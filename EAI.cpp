@@ -654,7 +654,7 @@ void BaseControl::GoToXY(float x,float y)
 		cx=cost*tx-sint*ty;
 		cy=sint*tx+cost*ty;
 		ReadSornaSensor();
-		while !(sornar[0]>15 && sornar[1]>15 && sornar[2]>15 ) 
+		while (!(sornar[0]>15 && sornar[1]>15 && sornar[2]>15 ) )
 		{
 			if(sornar[0]>sornar[1])
 			{
