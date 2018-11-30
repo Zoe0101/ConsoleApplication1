@@ -725,7 +725,7 @@ void BaseControl::GoToXYwithoutRotation(float xx,float yy)
 		direangle=atan2(y,x);
 		moveangle=2*abs(direangle);
 		movetick=(int) moveangle*abs(c)/tickpercm;
-		WalkRobotBySpeedLeftTick(vl, vr, movetick);
+		WalkRobotBySpeedLeftTick(vl/100, vr/100, movetick);
 	}
 	return;
 }
