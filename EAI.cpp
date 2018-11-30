@@ -703,7 +703,7 @@ void BaseControl::GoToXYwithoutRotation(float xx,float yy)
 	{
 		c=0;
 	}
-	cout<<'c is';
+	cout<<"c is";
 	cout<<c<<endl;
 	if(c==0)
 	{
