@@ -622,13 +622,13 @@ double rotateX(float x,float y,double a)
 {
 //	float tx=x;
 //	float ty=y;
-	return cos(a)*x-sin(a)*y
+	return cos(a)*x - sin(a)*y;
 }
 double rotateY(float x,float y,double a)
 {
 //	float tx=x;
 //	float ty=y;
-	return sin(a)*x+cos(a)*y
+	return sin(a)*x + cos(a)*y;
 }
 void BaseControl::GoToXY(float x,float y)
 {
