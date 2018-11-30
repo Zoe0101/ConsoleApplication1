@@ -79,9 +79,9 @@ int main(int argc, CHAR* argv[])
 						     break;  
 					case 't':MEAI.OneKeyTest(0.3,1); 
 						     break;
-					case 'b':MEAI.GoToXY(30,30); 
+					case 'b':MEAI.GoToXY(1,1); 
 						     break;
-					case 'c':MEAI.GoToXYwithoutRotation(30,30); 
+					case 'c':MEAI.GoToXYwithoutRotation(1,1); 
 						     break;
 					default:
 						break;
