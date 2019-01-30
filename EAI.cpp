@@ -732,3 +732,37 @@ void BaseControl::GoToXYwithoutRotation(float xx,float yy)
 	}
 	return;
 }
+
+void BaseControl::Ellipse(float a,float b)
+{
+	int c=1;
+	float step=5;
+	float cx,cy,nx,ny,sx,sy,sl,ct,st,tx,ty=0;
+
+	nx=cx+step;
+	ny=0.1*nx*nx;
+	GoToXYwithoutRotation(nx/100,ny/100);
+	c++;
+	cx=nx;
+	cy=ny;
+	while(c<11)
+	{
+		nx=cx+step;
+		ny=0.05*nx*nx;
+		sx=1;
+		sy=2*0.05*cx;
+		sl=sqrt(sx*sx+sy*sy);
+		ct=sx/sl;
+		st=-sy/sl;
+		tx=ct*nx-st*ny;
+		ty=st*nx+ct*ny;
+		tx=tx-sqrt(cx*cx+cy*cy);
+		GoToXYwithoutRotation(tx/100,ty/100);
+	}
+}
+
+void BaseControl::Ass()
+{
+	GoToXYwithoutRotation(0,0.5);
+	GoToXYwithoutRotation(0,-0.6);	
+}

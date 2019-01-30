@@ -83,6 +83,10 @@ int main(int argc, CHAR* argv[])
 						     break;
 					case 'c':MEAI.GoToXYwithoutRotation(0.5,0.5); 
 						     break;
+					case 's':MEAI.Ass();
+						     break;
+					case 'e':MEAI.Ellipse();
+						     break;
 					default:
 						break;
 					}
