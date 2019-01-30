@@ -400,7 +400,7 @@ void BaseControl::WalkRobotBySpeedLeftTick(float left, float right, int tick)
 			break;
 		}
 	}
-	stop();
+//	stop();
 	return;
 }
 //rotate robot with a certain angle
