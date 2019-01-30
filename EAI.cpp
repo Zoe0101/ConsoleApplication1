@@ -400,7 +400,7 @@ void BaseControl::WalkRobotBySpeedLeftTick(float left, float right, int tick)
 			break;
 		}
 	}
-//	stop();
+	stop();
 	return;
 }
 //rotate robot with a certain angle
@@ -730,6 +730,7 @@ void BaseControl::GoToXYwithoutRotation(float xx,float yy)
 		cout<<vr<<endl;
 		WalkRobotBySpeedLeftTick(vl, vr, movetick);
 	}
+	stop();
 	return;
 }
 
