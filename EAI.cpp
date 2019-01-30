@@ -737,7 +737,7 @@ void BaseControl::Ellipse(float a,float b)
 {
 	int c=1;
 	float step=5;
-	float cx,cy,nx,ny,sx,sy,sl,ct,st,tx,ty=0;
+	float cx=0,cy=0,nx=0,ny=0,sx=0,sy=0,sl=0,ct=0,st=0,tx=0,ty=0;
 
 	nx=cx+step;
 	ny=0.1*nx*nx;
@@ -761,8 +761,8 @@ void BaseControl::Ellipse(float a,float b)
 	}
 }
 
-void BaseControl::Ass()
+void BaseControl::SCurve(float a, float b)
 {
-	GoToXYwithoutRotation(0,0.5);
-	GoToXYwithoutRotation(0,-0.6);	
+	GoToXYwithoutRotation(0,0.3);
+	GoToXYwithoutRotation(0,-0.3);	
 }

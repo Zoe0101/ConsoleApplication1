@@ -50,7 +50,7 @@ public:
 	void BaseControl::GoToXY(float x,float y);
 	void BaseControl::GoToXYwithoutRotation(float xx,float yy);
 	void BaseControl::Ellipse(float a,float b);
-	void BaseControl::Ass(float a,float b);
+	void BaseControl::SCurve(float a,float b);
 
 private:
 	//hardware information
