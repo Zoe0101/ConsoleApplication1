@@ -392,7 +392,7 @@ void BaseControl::WalkRobotBySpeedLeftTick(float left, float right, int tick)
 		Sleep(20);
 		//sleep 25
 		getEncoderCounts();
-		currenttick = abs(e[0]);
+		currenttick = (abs(e[0]) + abs(e[1])) / 2;;
 		cout << "current tick.: " << currenttick << endl;
 		err = desiretick- currenttick;
 		if (_kbhit()) wkey = _getch();
@@ -728,7 +728,8 @@ void BaseControl::GoToXYwithoutRotation(float xx,float yy)
 		}
 		direangle=atan2(y,x);
 		moveangle=2*abs(direangle);
-		movetick=(int) (moveangle*rl*tickpercm);
+//		movetick=(int) (moveangle*rl*tickpercm);
+		movetick=(int)round(moveangle*abs(c)*tickpercm);
 		cout<<vl<<endl;
 		cout<<vr<<endl;
 		WalkRobotBySpeedLeftTick(vl, vr, movetick);
