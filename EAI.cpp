@@ -690,7 +690,7 @@ void BaseControl::GoToXYwithoutRotation(float xx,float yy)
 	float s=0;
 	float c=0;
 	float vl,vr,va,rl=0;
-	float speedtick=1000;
+	float speedtick=1200;
 	float tickpercm=31.8310;
 	float direangle,moveangle=0;
 	int movetick=0;
