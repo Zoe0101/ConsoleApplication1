@@ -388,7 +388,12 @@ void BaseControl::WalkRobotBySpeedLeftTick(float left, float right, int tick)
 	while (err>0)
 	{
 		//make sure no object is before the base
-		driveWithSpeed(vl, vr);
+		if (err>0.1*tick)
+		{
+			driveWithSpeed(vl, vr);
+		}else{
+			driveWithSpeed(vl/2, vr/2);
+		}
 		Sleep(20);
 		//sleep 25
 		getEncoderCounts();
