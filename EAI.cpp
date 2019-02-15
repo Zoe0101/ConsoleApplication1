@@ -716,17 +716,19 @@ void BaseControl::GoToXYwithoutRotation(float xx,float yy)
 		va=2*M_PI/speedtick;
 		if(y>0)
 		{
+			rl=abs(c)-WheelTrack/2;
 			vl=va*(abs(c)-WheelTrack/2);
 			vr=va*(abs(c)+WheelTrack/2);
 		}
 		else
 		{
+			rl=abs(c)+WheelTrack/2;
 			vl=va*(abs(c)+WheelTrack/2);
 			vr=va*(abs(c)-WheelTrack/2);
 		}
 		direangle=atan2(y,x);
 		moveangle=2*abs(direangle);
-		movetick=(int) (moveangle*abs(c)*tickpercm);
+		movetick=(int) (moveangle*rl*tickpercm);
 		cout<<vl<<endl;
 		cout<<vr<<endl;
 		WalkRobotBySpeedLeftTick(vl, vr, movetick);
