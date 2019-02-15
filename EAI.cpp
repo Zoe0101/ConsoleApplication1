@@ -390,6 +390,7 @@ void BaseControl::WalkRobotBySpeedLeftTick(float left, float right, int tick)
 		//make sure no object is before the base
 		driveWithSpeed(vl, vr);
 		Sleep(50);
+		//sleep 25
 		getEncoderCounts();
 		currenttick = abs(e[0]);
 		cout << "current tick.: " << currenttick << endl;
@@ -725,7 +726,7 @@ void BaseControl::GoToXYwithoutRotation(float xx,float yy)
 		}
 		direangle=atan2(y,x);
 		moveangle=2*abs(direangle);
-		movetick=(int) moveangle*abs(c)*tickpercm;
+		movetick=(int) (moveangle*abs(c)*tickpercm);
 		cout<<vl<<endl;
 		cout<<vr<<endl;
 		WalkRobotBySpeedLeftTick(vl, vr, movetick);
