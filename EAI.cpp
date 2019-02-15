@@ -734,7 +734,7 @@ void BaseControl::GoToXYwithoutRotation(float xx,float yy)
 		cout<<vr<<endl;
 		WalkRobotBySpeedLeftTick(vl, vr, movetick);
 	}
-	stop();
+//	stop();
 	return;
 }
 
