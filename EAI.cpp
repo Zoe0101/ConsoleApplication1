@@ -765,6 +765,6 @@ void BaseControl::Ellipse(float a,float b)
 
 void BaseControl::SCurve(float a, float b)
 {
-	GoToXYwithoutRotation(0,1);
+	GoToXYwithoutRotation(0.5,0.5);
 //	GoToXYwithoutRotation(0,-0.5);	
 }
