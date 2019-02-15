@@ -734,7 +734,7 @@ void BaseControl::GoToXYwithoutRotation(float xx,float yy)
 		cout<<vr<<endl;
 		WalkRobotBySpeedLeftTick(vl, vr, movetick);
 	}
-//	stop();
+	stop();
 	return;
 }
 
@@ -769,5 +769,5 @@ void BaseControl::Ellipse(float a,float b)
 void BaseControl::SCurve(float a, float b)
 {
 	GoToXYwithoutRotation(0.0,0.6);
-	GoToXYwithoutRotation(0.3,-0.3);	
+	GoToXYwithoutRotation(0.5,-0.5);	
 }
