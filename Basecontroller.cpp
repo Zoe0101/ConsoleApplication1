@@ -94,16 +94,17 @@ int main(int argc, CHAR* argv[])
 				MEAI.arduino->~Serial();
 			}
 			//Automode
-			//if (key=='a')
-			//{
-			//	myKinect.EAI.arduino = new Serial(myKinect.EAI.comPort);
-			//	while (key!=27)
-			//	{ 
-			//		key = NULL;
-			//		myKinect.Update();
-			//		if (_kbhit()) key = _getch();
-			//	    myKinect.TrackingHuman();
-			//	    Sleep(500);
+			if (key=='a')
+			{
+				myKinect.EAI.arduino = new Serial(myKinect.EAI.comPort);
+				while (key!=27)
+				{ 
+					key = NULL;
+					myKinect.Update();
+					if (_kbhit()) key = _getch();
+//				    myKinect.TrackingHuman();
+					myKinect.GoHuman();
+				    Sleep(500);
 			//	    if (myKinect.TrackStateofHuman())
 			//	    {
 			//		  cout << "The person is still walking! Please keep tracking!" << endl;
@@ -118,7 +119,7 @@ int main(int argc, CHAR* argv[])
 			//			continue;
 			//		  }
 			//		  else cout << "The person is still! Please observe carefully!" << endl;
-			//	    }
+				    }
 
 
 			//	    if (myKinect.TrackHands())
@@ -138,7 +139,7 @@ int main(int argc, CHAR* argv[])
 			//	   if (_kbhit()) key = _getch();
 			//   }
 			//	myKinect.EAI.arduino->~Serial();
-		 //  }
+		   }
 		if (key == 27) break;
 		}
 	}

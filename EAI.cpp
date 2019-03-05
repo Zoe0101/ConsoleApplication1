@@ -698,6 +698,8 @@ void BaseControl::GoToXYwithoutRotation(float xx,float yy)
 	float speedtick=1200;
 	float tickpercm=31.8310;
 	float direangle,moveangle=0;
+	float mul=0;
+	float sb=0.31;
 	int movetick=0;
 	if (y!=0)
 	{
@@ -719,17 +721,29 @@ void BaseControl::GoToXYwithoutRotation(float xx,float yy)
 	else
 	{
 		va=2*M_PI/speedtick;
+		if sqrt(xx*xx+yy*yy)>0.9{
+			mul=sqrt(xx*xx+yy*yy)/0.9;
+		}else{
+			mul=1.0;
+		}
+		
 		if(y>0)
 		{
 			rl=abs(c)-WheelTrack/2;
 			vl=va*(abs(c)-WheelTrack/2);
 			vr=va*(abs(c)+WheelTrack/2);
+			
+			vr=vr/vl*sb*mul;
+			vl=sb*mul;
 		}
 		else
 		{
 			rl=abs(c)+WheelTrack/2;
 			vl=va*(abs(c)+WheelTrack/2);
 			vr=va*(abs(c)-WheelTrack/2);
+			
+			vl=vl/vr*sb*mul;
+			vr=sb*mul;
 		}
 		direangle=atan2(y,x);
 		moveangle=2*abs(direangle);

@@ -506,6 +506,44 @@ void CBodyBasics::TrackingHuman()
 	return;
 }
 
+void CBodyBasics::GoHuman()
+{
+	char mykey = NULL;
+	float x,y=0;
+	//if nobody in the view, then rotate the robot and try to find human arround
+	while(JspineBase.TrackingState == TrackingState_NotTracked)
+	{
+		cout << "no human is found!! Please look around!" << endl;
+		Sleep(3000);
+		EAI.RotateRobot(5,1);
+		 
+		 int i = 0;
+		 for (i = 0; i < 20; i++)
+		 {
+			 Update();	
+			 if (JspineBase.TrackingState != TrackingState_NotTracked) break;
+		 }
+		 if (JspineBase.TrackingState != TrackingState_NotTracked) break;
+		 if (_kbhit()) mykey = _getch();
+		 if (mykey == 27)  break;
+		//Sleep(2500);
+	}
+	//if at least a human is tracked
+	
+	cout << "the people is at " << Distance(JspineBase) << "meters away!" << endl;
+	if (Angle(JspineBase) < 0) cout << "the people is at " << Angle(JspineBase) << "degree in the left!" << endl;
+	else cout << "the people is at " << Angle(JspineBase) << " degree in the right!" << endl;
+	x=Distance(JspineBase)*cos(Angle(JspineBase)/180*PI);
+	if (Angle(JspineBase) < 0)
+	{
+		y=Distance(JspineBase)*sin(Angle(JspineBase)/180*PI);	
+	}
+	else
+	{
+		y=-Distance(JspineBase)*sin(Angle(JspineBase)/180*PI);
+	}
+	EAI.GoToXYwithoutRotation(x,y);
+}
 //Track the state of human
 //the state of human is divided to walking and still
 bool CBodyBasics::TrackStateofHuman()

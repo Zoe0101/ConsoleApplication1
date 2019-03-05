@@ -57,6 +57,8 @@ public:
 	float static Length_Ankle_Foot;
 	//tracking human body
 	void CBodyBasics::TrackingHuman();
+	
+	void CBodyBasics::GoHuman();
 	// Track the state of human
 	//the state of human is divided to walking and still
 	bool CBodyBasics::TrackStateofHuman();
@@ -94,6 +96,7 @@ private:
 	double CBodyBasics::Distance(Joint joint);
 	//calculate the location angle of joint reference to camera
 	double CBodyBasics::Angle(Joint joint);
+	
 	
 
 };
