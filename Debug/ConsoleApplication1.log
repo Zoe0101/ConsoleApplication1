@@ -1,33 +1,67 @@
-﻿Build started 19/2/15 下午2:34:33.
+﻿Build started 19/3/5 下午3:46:08.
      1>Project "\\Mac\Home\Desktop\EAI_basecontroll\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _CRT_SECURE_NO_WARNNINGS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Basecontroller.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt EAI.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _CRT_SECURE_NO_WARNNINGS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\Basecontroller.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _CRT_SECURE_NO_WARNNINGS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Basecontroller.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Basecontroller.cpp EAI.cpp Kinect.cpp SerialClass.cpp
+         Kinect.cpp
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\basecontrol.h(83): warning C4305: 'initializing' : truncation from 'double' to 'const float'
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.h(82): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.h(83): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.h(84): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.cpp(306): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.cpp(306): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.cpp(310): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.cpp(310): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.cpp(355): warning C4244: 'argument' : conversion from 'const float' to 'int', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.cpp(378): warning C4244: 'argument' : conversion from 'const float' to 'int', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.cpp(379): warning C4244: 'argument' : conversion from 'const float' to 'int', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.cpp(536): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.cpp(539): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.cpp(543): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
          EAI.cpp
      1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\basecontrol.h(83): warning C4305: 'initializing' : truncation from 'double' to 'const float'
-     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(417): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
-     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(418): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(422): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
      1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(423): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
-     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(424): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
-     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(470): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
-     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(471): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(428): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(429): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(475): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
      1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(476): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
-     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(477): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
-     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(671): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(672): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(694): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(716): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(745): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(753): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(755): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(481): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(482): warning C4244: '=' : conversion from 'const double' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(676): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(677): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(699): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(702): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(723): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(725): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(768): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(776): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(778): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\eai.cpp(791): warning C4305: 'argument' : truncation from 'double' to 'float'
+         Basecontroller.cpp
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\basecontrol.h(83): warning C4305: 'initializing' : truncation from 'double' to 'const float'
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.h(82): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.h(83): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\kinect.h(84): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\basecontroller.cpp(70): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\basecontroller.cpp(71): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\basecontroller.cpp(72): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\basecontroller.cpp(73): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>\\mac\home\desktop\eai_basecontroll\consoleapplication1\consoleapplication1\basecontroller.cpp(80): warning C4305: 'argument' : truncation from 'double' to 'float'
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         SerialClass.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"\\Mac\Home\Desktop\EAI_basecontroll\ConsoleApplication1\Debug\Basecontroller.exe" /INCREMENTAL /NOLOGO Kinect20.lib opencv_calib3d2411d.lib opencv_contrib2411d.lib opencv_core2411d.lib opencv_features2d2411d.lib opencv_flann2411d.lib opencv_gpu2411d.lib opencv_highgui2411d.lib opencv_imgproc2411d.lib opencv_legacy2411d.lib opencv_ml2411d.lib opencv_nonfree2411d.lib opencv_objdetect2411d.lib opencv_ocl2411d.lib opencv_photo2411d.lib opencv_stitching2411d.lib opencv_superres2411d.lib opencv_ts2411d.lib opencv_video2411d.lib opencv_videostab2411d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"\\Mac\Home\Desktop\EAI_basecontroll\ConsoleApplication1\Debug\Basecontroller.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"\\Mac\Home\Desktop\EAI_basecontroll\ConsoleApplication1\Debug\Basecontroller.lib" /MACHINE:X86 Debug\Basecontroller.obj
          Debug\SerialClass.obj
          Debug\EAI.obj
          Debug\Kinect.obj
          Debug\stdafx.obj
-         ConsoleApplication1.vcxproj -> \\Mac\Home\Desktop\EAI_basecontroll\ConsoleApplication1\Debug\Basecontroller.exe
-     1>Done Building Project "\\Mac\Home\Desktop\EAI_basecontroll\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (Build target(s)).
+     1>SerialClass.obj : error LNK2011: precompiled object not linked in; image may not run
+     1>\\Mac\Home\Desktop\EAI_basecontroll\ConsoleApplication1\Debug\Basecontroller.exe : fatal error LNK1120: 1 unresolved externals
+     1>Done Building Project "\\Mac\Home\Desktop\EAI_basecontroll\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:01.78
+Time Elapsed 00:00:07.31

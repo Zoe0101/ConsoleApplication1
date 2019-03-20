@@ -721,9 +721,10 @@ void BaseControl::GoToXYwithoutRotation(float xx,float yy)
 	else
 	{
 		va=2*M_PI/speedtick;
-		if sqrt(xx*xx+yy*yy)>0.9{
+		if (sqrt(xx*xx+yy*yy)>0.9){
 			mul=sqrt(xx*xx+yy*yy)/0.9;
-		}else{
+		}
+		else{
 			mul=1.0;
 		}
 		
